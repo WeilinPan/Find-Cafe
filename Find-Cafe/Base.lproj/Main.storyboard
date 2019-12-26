@@ -138,6 +138,9 @@
                                         <state key="normal" title="Login">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="loginPressed:" destination="h1i-oZ-3EQ" eventType="touchUpInside" id="L0o-Rf-kde"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IEB-Q4-RM0">
                                         <rect key="frame" x="0.0" y="67" width="200" height="47"/>
@@ -175,6 +178,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="PvT-7j-rJn"/>
                     <connections>
+                        <outlet property="emailTextfield" destination="Soa-5q-f3n" id="XNN-Rh-KEU"/>
+                        <outlet property="loginButton" destination="Agr-VU-Qje" id="HhG-Be-Izo"/>
+                        <outlet property="passwordTextfield" destination="Vhk-vs-Lrd" id="pd7-RV-ypm"/>
+                        <outlet property="registerButton" destination="IEB-Q4-RM0" id="H54-WP-qJU"/>
                         <segue destination="CSK-Kl-52C" kind="show" identifier="LoginToMenu" id="SWE-5D-BVi"/>
                     </connections>
                 </viewController>
@@ -254,6 +261,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="wV7-af-h3i" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="l5A-SW-REW">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -337,6 +345,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Register"/>
+                                        <connections>
+                                            <action selector="registerPressed:" destination="WjM-5c-JfY" eventType="touchUpInside" id="KT8-Ft-fB8"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -367,6 +378,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="A3f-wu-GhH"/>
                     <connections>
+                        <outlet property="emailTextfield" destination="qaC-Ef-KJn" id="tu9-P2-NKa"/>
+                        <outlet property="passwordTextfield" destination="BRB-C3-a4w" id="lh1-Ga-Smr"/>
                         <segue destination="CSK-Kl-52C" kind="show" identifier="RegisterToMenu" id="iNM-5R-Zin"/>
                     </connections>
                 </viewController>

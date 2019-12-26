@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,9 +18,12 @@
 		67A0323F23B4952B00A928E9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A0323E23B4952B00A928E9 /* RegisterViewController.swift */; };
 		67A0324123B4968E00A928E9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A0324023B4968E00A928E9 /* MenuViewController.swift */; };
 		67A0324323B496CD00A928E9 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A0324223B496CD00A928E9 /* AboutTableViewController.swift */; };
+		67A0324A23B49E4F00A928E9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67A0324923B49E4F00A928E9 /* GoogleService-Info.plist */; };
+		D6C4BF7A503A9E9B1364F623 /* Pods_Find_Cafe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A637899038FB4E05F0410CE /* Pods_Find_Cafe.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A637899038FB4E05F0410CE /* Pods_Find_Cafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Find_Cafe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67A0322223B491F800A928E9 /* Find-Cafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Find-Cafe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67A0322523B491F800A928E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67A0322723B491F800A928E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +37,9 @@
 		67A0323E23B4952B00A928E9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		67A0324023B4968E00A928E9 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		67A0324223B496CD00A928E9 /* AboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
+		67A0324923B49E4F00A928E9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B937F39F00E32F7B64621FB3 /* Pods-Find-Cafe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Find-Cafe.debug.xcconfig"; path = "Target Support Files/Pods-Find-Cafe/Pods-Find-Cafe.debug.xcconfig"; sourceTree = "<group>"; };
+		F0E0DC187C04EFE12FE8A818 /* Pods-Find-Cafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Find-Cafe.release.xcconfig"; path = "Target Support Files/Pods-Find-Cafe/Pods-Find-Cafe.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +47,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6C4BF7A503A9E9B1364F623 /* Pods_Find_Cafe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23B70DE4FE023EE09164F21E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A637899038FB4E05F0410CE /* Pods_Find_Cafe.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		67A0321923B491F800A928E9 = {
 			isa = PBXGroup;
 			children = (
 				67A0322423B491F800A928E9 /* Find-Cafe */,
 				67A0322323B491F800A928E9 /* Products */,
+				8F9DF3B824AE55B7D9F0179C /* Pods */,
+				23B70DE4FE023EE09164F21E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +92,7 @@
 				67A0323323B491FA00A928E9 /* LaunchScreen.storyboard */,
 				67A0323623B491FA00A928E9 /* Info.plist */,
 				67A0322E23B491F800A928E9 /* Find_Cafe.xcdatamodeld */,
+				67A0324923B49E4F00A928E9 /* GoogleService-Info.plist */,
 			);
 			path = "Find-Cafe";
 			sourceTree = "<group>";
@@ -90,6 +108,15 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		8F9DF3B824AE55B7D9F0179C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B937F39F00E32F7B64621FB3 /* Pods-Find-Cafe.debug.xcconfig */,
+				F0E0DC187C04EFE12FE8A818 /* Pods-Find-Cafe.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -97,9 +124,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 67A0323923B491FA00A928E9 /* Build configuration list for PBXNativeTarget "Find-Cafe" */;
 			buildPhases = (
+				ABD8C2D06F4EA0A6342D704D /* [CP] Check Pods Manifest.lock */,
 				67A0321E23B491F800A928E9 /* Sources */,
 				67A0321F23B491F800A928E9 /* Frameworks */,
 				67A0322023B491F800A928E9 /* Resources */,
+				016F0906F589A45F41FB18FA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,12 +178,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				67A0323523B491FA00A928E9 /* LaunchScreen.storyboard in Resources */,
+				67A0324A23B49E4F00A928E9 /* GoogleService-Info.plist in Resources */,
 				67A0323223B491FA00A928E9 /* Assets.xcassets in Resources */,
 				67A0322D23B491F800A928E9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		016F0906F589A45F41FB18FA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Find-Cafe/Pods-Find-Cafe-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Find-Cafe/Pods-Find-Cafe-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Find-Cafe/Pods-Find-Cafe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABD8C2D06F4EA0A6342D704D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Find-Cafe-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		67A0321E23B491F800A928E9 /* Sources */ = {
@@ -310,6 +382,7 @@
 		};
 		67A0323A23B491FA00A928E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B937F39F00E32F7B64621FB3 /* Pods-Find-Cafe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -328,6 +401,7 @@
 		};
 		67A0323B23B491FA00A928E9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0E0DC187C04EFE12FE8A818 /* Pods-Find-Cafe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
