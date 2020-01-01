@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		670B043123B5A9E20054333E /* APICitiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670B043023B5A9E20054333E /* APICitiesTableViewController.swift */; };
+		670B043323B5B8E20054333E /* APICitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670B043223B5B8E20054333E /* APICitiesTableViewCell.swift */; };
+		670B043823B5E4150054333E /* APICitiesBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670B043723B5E4150054333E /* APICitiesBrain.swift */; };
+		670B043E23B6049E0054333E /* APICityCafeListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670B043D23B6049E0054333E /* APICityCafeListTableViewController.swift */; };
+		670B044023B6567F0054333E /* APIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670B043F23B6567F0054333E /* APIData.swift */; };
+		676AF9BD23BAECD2002D1A85 /* APIMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676AF9BC23BAECD2002D1A85 /* APIMapViewController.swift */; };
 		67A0322623B491F800A928E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A0322523B491F800A928E9 /* AppDelegate.swift */; };
 		67A0322823B491F800A928E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A0322723B491F800A928E9 /* SceneDelegate.swift */; };
 		67A0322A23B491F800A928E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A0322923B491F800A928E9 /* ViewController.swift */; };
@@ -19,11 +25,22 @@
 		67A0324123B4968E00A928E9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A0324023B4968E00A928E9 /* MenuViewController.swift */; };
 		67A0324323B496CD00A928E9 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A0324223B496CD00A928E9 /* AboutTableViewController.swift */; };
 		67A0324A23B49E4F00A928E9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67A0324923B49E4F00A928E9 /* GoogleService-Info.plist */; };
+		67A18C1023B7071400B85B69 /* APICityCafeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A18C0F23B7071400B85B69 /* APICityCafeListTableViewCell.swift */; };
+		67E78EE223B997FC00488E40 /* APICafeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E78EE123B997FC00488E40 /* APICafeDetailsViewController.swift */; };
+		67E78EE423B9A3DE00488E40 /* APICafeDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E78EE323B9A3DE00488E40 /* APICafeDetailHeaderView.swift */; };
+		67E78EE623B9ECEF00488E40 /* APICafeDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E78EE523B9ECEF00488E40 /* APICafeDetailTableViewCell.swift */; };
+		67E78EE823B9FD8500488E40 /* APICafeDetailMapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E78EE723B9FD8400488E40 /* APICafeDetailMapTableViewCell.swift */; };
 		D6C4BF7A503A9E9B1364F623 /* Pods_Find_Cafe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A637899038FB4E05F0410CE /* Pods_Find_Cafe.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1A637899038FB4E05F0410CE /* Pods_Find_Cafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Find_Cafe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		670B043023B5A9E20054333E /* APICitiesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICitiesTableViewController.swift; sourceTree = "<group>"; };
+		670B043223B5B8E20054333E /* APICitiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICitiesTableViewCell.swift; sourceTree = "<group>"; };
+		670B043723B5E4150054333E /* APICitiesBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICitiesBrain.swift; sourceTree = "<group>"; };
+		670B043D23B6049E0054333E /* APICityCafeListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICityCafeListTableViewController.swift; sourceTree = "<group>"; };
+		670B043F23B6567F0054333E /* APIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIData.swift; sourceTree = "<group>"; };
+		676AF9BC23BAECD2002D1A85 /* APIMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMapViewController.swift; sourceTree = "<group>"; };
 		67A0322223B491F800A928E9 /* Find-Cafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Find-Cafe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67A0322523B491F800A928E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67A0322723B491F800A928E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +55,11 @@
 		67A0324023B4968E00A928E9 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		67A0324223B496CD00A928E9 /* AboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
 		67A0324923B49E4F00A928E9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		67A18C0F23B7071400B85B69 /* APICityCafeListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICityCafeListTableViewCell.swift; sourceTree = "<group>"; };
+		67E78EE123B997FC00488E40 /* APICafeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICafeDetailsViewController.swift; sourceTree = "<group>"; };
+		67E78EE323B9A3DE00488E40 /* APICafeDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICafeDetailHeaderView.swift; sourceTree = "<group>"; };
+		67E78EE523B9ECEF00488E40 /* APICafeDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICafeDetailTableViewCell.swift; sourceTree = "<group>"; };
+		67E78EE723B9FD8400488E40 /* APICafeDetailMapTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICafeDetailMapTableViewCell.swift; sourceTree = "<group>"; };
 		B937F39F00E32F7B64621FB3 /* Pods-Find-Cafe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Find-Cafe.debug.xcconfig"; path = "Target Support Files/Pods-Find-Cafe/Pods-Find-Cafe.debug.xcconfig"; sourceTree = "<group>"; };
 		F0E0DC187C04EFE12FE8A818 /* Pods-Find-Cafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Find-Cafe.release.xcconfig"; path = "Target Support Files/Pods-Find-Cafe/Pods-Find-Cafe.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,6 +82,15 @@
 				1A637899038FB4E05F0410CE /* Pods_Find_Cafe.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		670B043623B5E38D0054333E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				670B043F23B6567F0054333E /* APIData.swift */,
+				670B043723B5E4150054333E /* APICitiesBrain.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		67A0321923B491F800A928E9 = {
@@ -87,6 +118,7 @@
 				67A0322723B491F800A928E9 /* SceneDelegate.swift */,
 				67A0322923B491F800A928E9 /* ViewController.swift */,
 				67A0322B23B491F800A928E9 /* Main.storyboard */,
+				670B043623B5E38D0054333E /* Models */,
 				67A0324423B4979800A928E9 /* Controllers */,
 				67A0323123B491FA00A928E9 /* Assets.xcassets */,
 				67A0323323B491FA00A928E9 /* LaunchScreen.storyboard */,
@@ -100,6 +132,15 @@
 		67A0324423B4979800A928E9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				676AF9BC23BAECD2002D1A85 /* APIMapViewController.swift */,
+				670B043023B5A9E20054333E /* APICitiesTableViewController.swift */,
+				670B043223B5B8E20054333E /* APICitiesTableViewCell.swift */,
+				670B043D23B6049E0054333E /* APICityCafeListTableViewController.swift */,
+				67A18C0F23B7071400B85B69 /* APICityCafeListTableViewCell.swift */,
+				67E78EE723B9FD8400488E40 /* APICafeDetailMapTableViewCell.swift */,
+				67E78EE323B9A3DE00488E40 /* APICafeDetailHeaderView.swift */,
+				67E78EE523B9ECEF00488E40 /* APICafeDetailTableViewCell.swift */,
+				67E78EE123B997FC00488E40 /* APICafeDetailsViewController.swift */,
 				67A0324223B496CD00A928E9 /* AboutTableViewController.swift */,
 				67A0324023B4968E00A928E9 /* MenuViewController.swift */,
 				67A0323E23B4952B00A928E9 /* RegisterViewController.swift */,
@@ -236,11 +277,22 @@
 				67A0322A23B491F800A928E9 /* ViewController.swift in Sources */,
 				67A0323023B491F800A928E9 /* Find_Cafe.xcdatamodeld in Sources */,
 				67A0322623B491F800A928E9 /* AppDelegate.swift in Sources */,
+				67E78EE623B9ECEF00488E40 /* APICafeDetailTableViewCell.swift in Sources */,
+				670B043323B5B8E20054333E /* APICitiesTableViewCell.swift in Sources */,
+				676AF9BD23BAECD2002D1A85 /* APIMapViewController.swift in Sources */,
+				67E78EE223B997FC00488E40 /* APICafeDetailsViewController.swift in Sources */,
 				67A0324323B496CD00A928E9 /* AboutTableViewController.swift in Sources */,
 				67A0324123B4968E00A928E9 /* MenuViewController.swift in Sources */,
 				67A0323F23B4952B00A928E9 /* RegisterViewController.swift in Sources */,
+				670B044023B6567F0054333E /* APIData.swift in Sources */,
 				67A0322823B491F800A928E9 /* SceneDelegate.swift in Sources */,
+				67E78EE823B9FD8500488E40 /* APICafeDetailMapTableViewCell.swift in Sources */,
+				670B043123B5A9E20054333E /* APICitiesTableViewController.swift in Sources */,
+				67E78EE423B9A3DE00488E40 /* APICafeDetailHeaderView.swift in Sources */,
+				67A18C1023B7071400B85B69 /* APICityCafeListTableViewCell.swift in Sources */,
+				670B043823B5E4150054333E /* APICitiesBrain.swift in Sources */,
 				67A0323D23B4923800A928E9 /* MainViewController.swift in Sources */,
+				670B043E23B6049E0054333E /* APICityCafeListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

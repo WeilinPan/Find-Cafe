@@ -46,6 +46,8 @@ class MainViewController: UIViewController {
                     self.alertMessage(error: e)
                 } else {
                     self.performSegue(withIdentifier: "LoginToMenu", sender: self)
+//                    self.emailTextfield.text = ""
+//                    self.passwordTextfield.text = ""
                 }
             }
         }
