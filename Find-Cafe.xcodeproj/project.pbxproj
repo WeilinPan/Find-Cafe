@@ -13,6 +13,17 @@
 		670B043E23B6049E0054333E /* APICityCafeListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670B043D23B6049E0054333E /* APICityCafeListTableViewController.swift */; };
 		670B044023B6567F0054333E /* APIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670B043F23B6567F0054333E /* APIData.swift */; };
 		676AF9BD23BAECD2002D1A85 /* APIMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676AF9BC23BAECD2002D1A85 /* APIMapViewController.swift */; };
+		676AF9BF23BCE144002D1A85 /* UserCitiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676AF9BE23BCE144002D1A85 /* UserCitiesTableViewController.swift */; };
+		676AF9C123BCE953002D1A85 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676AF9C023BCE953002D1A85 /* UserData.swift */; };
+		676AF9C323BCEA1A002D1A85 /* UserCitiesBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676AF9C223BCEA1A002D1A85 /* UserCitiesBrain.swift */; };
+		676AF9C523BCED77002D1A85 /* UserCitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676AF9C423BCED77002D1A85 /* UserCitiesTableViewCell.swift */; };
+		676AF9C723BCF312002D1A85 /* UserCityCafeListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676AF9C623BCF312002D1A85 /* UserCityCafeListTableViewController.swift */; };
+		676AF9C923BCF3A3002D1A85 /* UserCityCafeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676AF9C823BCF3A3002D1A85 /* UserCityCafeListTableViewCell.swift */; };
+		676AF9CD23BD8A9A002D1A85 /* NewCafeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676AF9CC23BD8A9A002D1A85 /* NewCafeTableViewController.swift */; };
+		676AF9CF23BE3D98002D1A85 /* UserCafeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676AF9CE23BE3D98002D1A85 /* UserCafeDetailViewController.swift */; };
+		676AF9D123BE3DF5002D1A85 /* UserCafeDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676AF9D023BE3DF5002D1A85 /* UserCafeDetailHeaderView.swift */; };
+		676AF9D323BE3E77002D1A85 /* UserCafeDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676AF9D223BE3E77002D1A85 /* UserCafeDetailTableViewCell.swift */; };
+		676AF9D523BE3F09002D1A85 /* UserCafeDetailMapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676AF9D423BE3F09002D1A85 /* UserCafeDetailMapTableViewCell.swift */; };
 		67A0322623B491F800A928E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A0322523B491F800A928E9 /* AppDelegate.swift */; };
 		67A0322823B491F800A928E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A0322723B491F800A928E9 /* SceneDelegate.swift */; };
 		67A0322A23B491F800A928E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A0322923B491F800A928E9 /* ViewController.swift */; };
@@ -26,6 +37,7 @@
 		67A0324323B496CD00A928E9 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A0324223B496CD00A928E9 /* AboutTableViewController.swift */; };
 		67A0324A23B49E4F00A928E9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67A0324923B49E4F00A928E9 /* GoogleService-Info.plist */; };
 		67A18C1023B7071400B85B69 /* APICityCafeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A18C0F23B7071400B85B69 /* APICityCafeListTableViewCell.swift */; };
+		67A67C7723BF2EC40048FB76 /* UserMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A67C7623BF2EC40048FB76 /* UserMapViewController.swift */; };
 		67E78EE223B997FC00488E40 /* APICafeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E78EE123B997FC00488E40 /* APICafeDetailsViewController.swift */; };
 		67E78EE423B9A3DE00488E40 /* APICafeDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E78EE323B9A3DE00488E40 /* APICafeDetailHeaderView.swift */; };
 		67E78EE623B9ECEF00488E40 /* APICafeDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E78EE523B9ECEF00488E40 /* APICafeDetailTableViewCell.swift */; };
@@ -41,6 +53,17 @@
 		670B043D23B6049E0054333E /* APICityCafeListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICityCafeListTableViewController.swift; sourceTree = "<group>"; };
 		670B043F23B6567F0054333E /* APIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIData.swift; sourceTree = "<group>"; };
 		676AF9BC23BAECD2002D1A85 /* APIMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMapViewController.swift; sourceTree = "<group>"; };
+		676AF9BE23BCE144002D1A85 /* UserCitiesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCitiesTableViewController.swift; sourceTree = "<group>"; };
+		676AF9C023BCE953002D1A85 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		676AF9C223BCEA1A002D1A85 /* UserCitiesBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCitiesBrain.swift; sourceTree = "<group>"; };
+		676AF9C423BCED77002D1A85 /* UserCitiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCitiesTableViewCell.swift; sourceTree = "<group>"; };
+		676AF9C623BCF312002D1A85 /* UserCityCafeListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCityCafeListTableViewController.swift; sourceTree = "<group>"; };
+		676AF9C823BCF3A3002D1A85 /* UserCityCafeListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCityCafeListTableViewCell.swift; sourceTree = "<group>"; };
+		676AF9CC23BD8A9A002D1A85 /* NewCafeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCafeTableViewController.swift; sourceTree = "<group>"; };
+		676AF9CE23BE3D98002D1A85 /* UserCafeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCafeDetailViewController.swift; sourceTree = "<group>"; };
+		676AF9D023BE3DF5002D1A85 /* UserCafeDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCafeDetailHeaderView.swift; sourceTree = "<group>"; };
+		676AF9D223BE3E77002D1A85 /* UserCafeDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCafeDetailTableViewCell.swift; sourceTree = "<group>"; };
+		676AF9D423BE3F09002D1A85 /* UserCafeDetailMapTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCafeDetailMapTableViewCell.swift; sourceTree = "<group>"; };
 		67A0322223B491F800A928E9 /* Find-Cafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Find-Cafe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67A0322523B491F800A928E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67A0322723B491F800A928E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +79,7 @@
 		67A0324223B496CD00A928E9 /* AboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
 		67A0324923B49E4F00A928E9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		67A18C0F23B7071400B85B69 /* APICityCafeListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICityCafeListTableViewCell.swift; sourceTree = "<group>"; };
+		67A67C7623BF2EC40048FB76 /* UserMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMapViewController.swift; sourceTree = "<group>"; };
 		67E78EE123B997FC00488E40 /* APICafeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICafeDetailsViewController.swift; sourceTree = "<group>"; };
 		67E78EE323B9A3DE00488E40 /* APICafeDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICafeDetailHeaderView.swift; sourceTree = "<group>"; };
 		67E78EE523B9ECEF00488E40 /* APICafeDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICafeDetailTableViewCell.swift; sourceTree = "<group>"; };
@@ -89,8 +113,43 @@
 			children = (
 				670B043F23B6567F0054333E /* APIData.swift */,
 				670B043723B5E4150054333E /* APICitiesBrain.swift */,
+				676AF9C023BCE953002D1A85 /* UserData.swift */,
+				676AF9C223BCEA1A002D1A85 /* UserCitiesBrain.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		676AF9CA23BCF4F2002D1A85 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				676AF9BC23BAECD2002D1A85 /* APIMapViewController.swift */,
+				670B043023B5A9E20054333E /* APICitiesTableViewController.swift */,
+				670B043223B5B8E20054333E /* APICitiesTableViewCell.swift */,
+				670B043D23B6049E0054333E /* APICityCafeListTableViewController.swift */,
+				67A18C0F23B7071400B85B69 /* APICityCafeListTableViewCell.swift */,
+				67E78EE723B9FD8400488E40 /* APICafeDetailMapTableViewCell.swift */,
+				67E78EE323B9A3DE00488E40 /* APICafeDetailHeaderView.swift */,
+				67E78EE523B9ECEF00488E40 /* APICafeDetailTableViewCell.swift */,
+				67E78EE123B997FC00488E40 /* APICafeDetailsViewController.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		676AF9CB23BD87BA002D1A85 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				676AF9BE23BCE144002D1A85 /* UserCitiesTableViewController.swift */,
+				676AF9C423BCED77002D1A85 /* UserCitiesTableViewCell.swift */,
+				676AF9D023BE3DF5002D1A85 /* UserCafeDetailHeaderView.swift */,
+				676AF9D223BE3E77002D1A85 /* UserCafeDetailTableViewCell.swift */,
+				676AF9D423BE3F09002D1A85 /* UserCafeDetailMapTableViewCell.swift */,
+				676AF9CE23BE3D98002D1A85 /* UserCafeDetailViewController.swift */,
+				67A67C7623BF2EC40048FB76 /* UserMapViewController.swift */,
+				676AF9C623BCF312002D1A85 /* UserCityCafeListTableViewController.swift */,
+				676AF9C823BCF3A3002D1A85 /* UserCityCafeListTableViewCell.swift */,
+				676AF9CC23BD8A9A002D1A85 /* NewCafeTableViewController.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		67A0321923B491F800A928E9 = {
@@ -132,15 +191,8 @@
 		67A0324423B4979800A928E9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				676AF9BC23BAECD2002D1A85 /* APIMapViewController.swift */,
-				670B043023B5A9E20054333E /* APICitiesTableViewController.swift */,
-				670B043223B5B8E20054333E /* APICitiesTableViewCell.swift */,
-				670B043D23B6049E0054333E /* APICityCafeListTableViewController.swift */,
-				67A18C0F23B7071400B85B69 /* APICityCafeListTableViewCell.swift */,
-				67E78EE723B9FD8400488E40 /* APICafeDetailMapTableViewCell.swift */,
-				67E78EE323B9A3DE00488E40 /* APICafeDetailHeaderView.swift */,
-				67E78EE523B9ECEF00488E40 /* APICafeDetailTableViewCell.swift */,
-				67E78EE123B997FC00488E40 /* APICafeDetailsViewController.swift */,
+				676AF9CA23BCF4F2002D1A85 /* API */,
+				676AF9CB23BD87BA002D1A85 /* User */,
 				67A0324223B496CD00A928E9 /* AboutTableViewController.swift */,
 				67A0324023B4968E00A928E9 /* MenuViewController.swift */,
 				67A0323E23B4952B00A928E9 /* RegisterViewController.swift */,
@@ -274,24 +326,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				676AF9D323BE3E77002D1A85 /* UserCafeDetailTableViewCell.swift in Sources */,
+				676AF9D523BE3F09002D1A85 /* UserCafeDetailMapTableViewCell.swift in Sources */,
 				67A0322A23B491F800A928E9 /* ViewController.swift in Sources */,
 				67A0323023B491F800A928E9 /* Find_Cafe.xcdatamodeld in Sources */,
 				67A0322623B491F800A928E9 /* AppDelegate.swift in Sources */,
 				67E78EE623B9ECEF00488E40 /* APICafeDetailTableViewCell.swift in Sources */,
+				67A67C7723BF2EC40048FB76 /* UserMapViewController.swift in Sources */,
 				670B043323B5B8E20054333E /* APICitiesTableViewCell.swift in Sources */,
 				676AF9BD23BAECD2002D1A85 /* APIMapViewController.swift in Sources */,
 				67E78EE223B997FC00488E40 /* APICafeDetailsViewController.swift in Sources */,
 				67A0324323B496CD00A928E9 /* AboutTableViewController.swift in Sources */,
 				67A0324123B4968E00A928E9 /* MenuViewController.swift in Sources */,
+				676AF9C123BCE953002D1A85 /* UserData.swift in Sources */,
+				676AF9BF23BCE144002D1A85 /* UserCitiesTableViewController.swift in Sources */,
 				67A0323F23B4952B00A928E9 /* RegisterViewController.swift in Sources */,
 				670B044023B6567F0054333E /* APIData.swift in Sources */,
+				676AF9CF23BE3D98002D1A85 /* UserCafeDetailViewController.swift in Sources */,
+				676AF9D123BE3DF5002D1A85 /* UserCafeDetailHeaderView.swift in Sources */,
 				67A0322823B491F800A928E9 /* SceneDelegate.swift in Sources */,
 				67E78EE823B9FD8500488E40 /* APICafeDetailMapTableViewCell.swift in Sources */,
+				676AF9C923BCF3A3002D1A85 /* UserCityCafeListTableViewCell.swift in Sources */,
 				670B043123B5A9E20054333E /* APICitiesTableViewController.swift in Sources */,
+				676AF9C323BCEA1A002D1A85 /* UserCitiesBrain.swift in Sources */,
+				676AF9C523BCED77002D1A85 /* UserCitiesTableViewCell.swift in Sources */,
 				67E78EE423B9A3DE00488E40 /* APICafeDetailHeaderView.swift in Sources */,
 				67A18C1023B7071400B85B69 /* APICityCafeListTableViewCell.swift in Sources */,
 				670B043823B5E4150054333E /* APICitiesBrain.swift in Sources */,
 				67A0323D23B4923800A928E9 /* MainViewController.swift in Sources */,
+				676AF9C723BCF312002D1A85 /* UserCityCafeListTableViewController.swift in Sources */,
+				676AF9CD23BD8A9A002D1A85 /* NewCafeTableViewController.swift in Sources */,
 				670B043E23B6049E0054333E /* APICityCafeListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

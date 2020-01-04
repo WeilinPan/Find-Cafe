@@ -101,7 +101,6 @@ extension APICafeDetailsViewController: UITableViewDataSource, UITableViewDelega
             if let _ = tableView.indexPathForSelectedRow, let data = detailData{
                 let destinationVC = segue.destination as! APIMapViewController
                 destinationVC.apiData = data
-
             }
         }
     }

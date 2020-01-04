@@ -12,7 +12,7 @@ class APICityCafeListTableViewCell: UITableViewCell {
     @IBOutlet weak var cafeImageView: UIImageView!
     @IBOutlet weak var cafeNameLabel: UILabel!
     @IBOutlet weak var cafeAddressLabel: UILabel!
-    @IBOutlet weak var cafeOpentimeLabel: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
