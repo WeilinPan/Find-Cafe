@@ -24,9 +24,9 @@ class UserCafeDetailMapTableViewCell: UITableViewCell {
     }
     
     func configure(location: String, name: String) {
-        // Get location
+        // 取得位置
         let geoCoder = CLGeocoder()
-        print(location)
+ 
         geoCoder.geocodeAddressString(location, completionHandler: { placemarks, error in
             if let error = error {
                 print(error.localizedDescription)

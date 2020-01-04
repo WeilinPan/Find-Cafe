@@ -13,11 +13,16 @@ class UserCityCafeListTableViewController: UITableViewController {
     var cityEnName: String?
     var userCities = [UserCafeDatas]()
     var indexPathRow: Int?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.backgroundColor = UIColor(red: 229 / 255, green: 216 / 255, blue: 191 / 255, alpha: 1)
         tableView.separatorStyle = .none
+        
+//        if let userCities = UserCafeDatas.readUserCafeDatasFromFile() {
+//            self.userCities = userCities
+//        }
     }
 
     // MARK: - Table view data source
@@ -55,6 +60,7 @@ class UserCityCafeListTableViewController: UITableViewController {
                 let newIndexPath = IndexPath(row: 0, section: 0)
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
+//            UserCafeDatas.saveToFile(userCities: userCities)
             
         }
     }
@@ -73,6 +79,7 @@ class UserCityCafeListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         userCities.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .automatic)
+//        UserCafeDatas.saveToFile(userCities: userCities)
     }
     
     

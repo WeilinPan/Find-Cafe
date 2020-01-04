@@ -15,7 +15,7 @@ class NewCafeTableViewController: UITableViewController {
         didSet {
             nameTextField.delegate = self
             nameTextField.tag = 1
-//            nameTextField.becomeFirstResponder()
+            nameTextField.becomeFirstResponder()
         }
     }
     @IBOutlet weak var addressTextField: UITextField! {
@@ -88,6 +88,68 @@ class NewCafeTableViewController: UITableViewController {
         view.endEditing(true)
     }
 
+    // MARK: - Navigation
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // 判斷必填項目是否有空白的情況
+        if nameTextField.text == "" || addressTextField.text == "" || cityTextView.text == ""{
+            let alert = UIAlertController(title: "Oops!有少資料喔！", message: "客倌！店名、地址與縣市為必填項目喔！", preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(alertAction)
+            present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        let name = nameTextField.text ?? ""
+        let city = cityTextView.text ?? ""
+        let tasty = Double(tastyTextField.text!) ?? 0.0
+        let address = addressTextField.text ?? ""
+        let mrt = mrtTextField.text ?? ""
+        let url = urlTextField.text ?? ""
+        let open_time = opentimeTextField.text ?? ""
+        let note = noteTextView.text ?? ""
+        let image = photoImageView.image?.pngData()
+        
+        
+        userCafeData = UserCafeDatas(name: name, city: city, tasty: tasty, address: address, mrt: mrt, url: url, open_time: open_time, note: note, image: image)
+    }
+}
+
+extension NewCafeTableViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return userCitiesBrain.citiesEnName.count
+    }
+    
+    // 顯示cloumn的內容
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return userCitiesBrain.citiesEnName[row]
+    }
+    
+    // 選擇picker後執行的內容
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let selectedData = userCitiesBrain.citiesEnName[row]
+        cityTextView?.text = selectedData
+    }
+}
+
+extension NewCafeTableViewController: UITextFieldDelegate {
+    // 按return鍵後跳到下一個textfiled
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let nextTextField = view.viewWithTag(textField.tag + 1) {
+            textField.resignFirstResponder()
+            nextTextField.becomeFirstResponder()
+        }
+        return true
+    }
+}
+
+extension NewCafeTableViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
         if indexPath.row == 0 {
@@ -123,69 +185,6 @@ class NewCafeTableViewController: UITableViewController {
 
     }
     
-    
-
-
-    // MARK: - Navigation
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // 判斷必填項目是否有空白的情況
-        if nameTextField.text == "" || addressTextField.text == "" {
-            let alert = UIAlertController(title: "Oops!有少資料喔！", message: "客倌！店名與地址為必填項目喔！", preferredStyle: .alert)
-            let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alert.addAction(alertAction)
-            present(alert, animated: true, completion: nil)
-            return
-        }
-        
-        let name = nameTextField.text ?? ""
-        let city = cityTextView.text ?? ""
-        let tasty = Double(tastyTextField.text!) ?? 0.0
-        let address = addressTextField.text ?? ""
-        let mrt = mrtTextField.text ?? ""
-        let url = urlTextField.text ?? ""
-        let open_time = opentimeTextField.text ?? ""
-        let note = noteTextView.text ?? ""
-        let image = photoImageView.image?.pngData()
-        
-        
-        userCafeData = UserCafeDatas(name: name, city: city, tasty: tasty, address: address, mrt: mrt, url: url, open_time: open_time, note: note, image: image)
-    }
-}
-
-extension NewCafeTableViewController: UIPickerViewDelegate, UIPickerViewDataSource {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return userCitiesBrain.citiesEnName.count
-    }
-    
-    // 顯示cloumn的內容
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return userCitiesBrain.citiesEnName[row]
-    }
-    
-    // 選擇picker後執行的內容
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let selectedData = userCitiesBrain.citiesEnName[row]
-        cityTextView?.text = selectedData
-    }
-}
-
-extension NewCafeTableViewController: UITextFieldDelegate {
-    // 按return鍵後跳到下一個textfiled
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if let nextTextField = view.viewWithTag(textField.tag + 1) {
-            textField.resignFirstResponder()
-            nextTextField.becomeFirstResponder()
-        }
-        return true
-    }
-}
-
-extension NewCafeTableViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             photoImageView.image = selectedImage

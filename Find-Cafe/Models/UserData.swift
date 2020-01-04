@@ -25,4 +25,24 @@ struct UserCafeDatas {
     var open_time: String?
     var note: String?
     var image: Data?
+    
+//    static func saveToFile(userCities: [UserCafeDatas]) {
+//        let propertyEncoder = PropertyListEncoder()
+//        if let data = try? propertyEncoder.encode(userCities) {
+//
+//            UserDefaults.standard.set(data, forKey: "coffeeBeans")
+//
+//        }
+//    }
+//
+//    static func readUserCafeDatasFromFile() -> [UserCafeDatas]? {
+//          let userDefaults = UserDefaults.standard
+//          let propertyDecoder = PropertyListDecoder()
+//          if let data = userDefaults.data(forKey: "coffeeBeans"), let userCities = try? propertyDecoder.decode([UserCafeDatas].self, from: data) {
+//              return userCities
+//          } else {
+//              return nil
+//          }
+//      }
 }
+

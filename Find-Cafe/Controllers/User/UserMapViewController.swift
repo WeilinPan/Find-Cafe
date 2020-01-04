@@ -25,7 +25,6 @@ class UserMapViewController: UIViewController {
                      return
                  }
                  if let placemarks = placemarks {
-            
                      let placemark = placemarks[0]
                    
                      let annotation = MKPointAnnotation()
