@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class NewCafeTableViewController: UITableViewController {
 
@@ -64,7 +65,10 @@ class NewCafeTableViewController: UITableViewController {
     }
     var userCafeData: UserCafeDatas?
     var userCitiesBrain = UserCitiesBrain()
-    var indexPathRow: Int!
+    var photoImageURL: URL?
+    var date: String?
+    var storageName: String?
+    var editMode: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,6 +84,11 @@ class NewCafeTableViewController: UITableViewController {
             photoImageView.image = UIImage(data: userCafeData.image!)
             photoImageView.contentMode = .scaleToFill
             photoLayout(imageView: photoImageView)
+            date = userCafeData.date
+            photoImageURL = URL(string: userCafeData.imageURL!)
+            storageName = userCafeData.storageName
+            editMode = true
+            self.navigationItem.title = "Edit Cafe"
         }
     }
     
@@ -109,9 +118,14 @@ class NewCafeTableViewController: UITableViewController {
         let open_time = opentimeTextField.text ?? ""
         let note = noteTextView.text ?? ""
         let image = photoImageView.image?.pngData()
+        if date == nil {
+            date = String(Date().timeIntervalSince1970)
+        }
+        if photoImageURL?.absoluteString == nil {
+            storageName = ""
+        }
         
-        
-        userCafeData = UserCafeDatas(name: name, city: city, tasty: tasty, address: address, mrt: mrt, url: url, open_time: open_time, note: note, image: image)
+        userCafeData = UserCafeDatas(name: name, city: city, tasty: tasty, address: address, mrt: mrt, url: url, open_time: open_time, note: note, image: image, imageURL: photoImageURL?.absoluteString, date: date!, storageName: storageName!)
     }
 }
 
@@ -190,6 +204,33 @@ extension NewCafeTableViewController: UIImagePickerControllerDelegate, UINavigat
             photoImageView.image = selectedImage
             photoImageView.contentMode = .scaleToFill
             photoImageView.clipsToBounds = true
+        }
+        
+        // 可以自動產生一組獨一無二的 ID 號碼，方便等一下上傳圖片的命名
+        let uniqueString = UUID().uuidString
+        storageName = "\(uniqueString).jpg"
+        
+        // 當判斷有 selectedImage 時，我們會在 if 判斷式裡將圖片上傳
+        if let image = photoImageView.image {
+            let storageRef = Storage.storage().reference().child("Find-Cafe").child("\(uniqueString).jpg")
+            if let uploadData = image.jpegData(compressionQuality: 0.3) {
+                storageRef.putData(uploadData, metadata: nil) { (data, error) in
+                    if error != nil {
+                        print("Error: \(error!.localizedDescription)")
+                        return
+                    }
+                    storageRef.downloadURL { (url, error) in
+                        guard let downloadURL = url else {
+                            return
+                        }
+                        print("Photo Url: \(downloadURL)")
+                        self.photoImageURL = downloadURL
+                        
+                    }
+                }
+            }
+            
+            print("\(uniqueString), \(image)")
         }
         
         // 選擇照片後設定auto layout並設定isActive屬性為true來啟動設定

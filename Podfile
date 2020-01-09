@@ -6,5 +6,6 @@ target 'Find-Cafe' do
   # Pods for Find-Cafe
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
-
+  pod 'Firebase/Storage'
+  
 end

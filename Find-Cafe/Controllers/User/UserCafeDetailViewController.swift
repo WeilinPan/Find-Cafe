@@ -13,7 +13,7 @@ import SafariServices
 class UserCafeDetailViewController: UIViewController {
     
     var detailData: UserCafeDatas?
-    var indexPathRow: Int!
+//    var indexPathRow: Int!
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var headerView: UserCafeDetailHeaderView!
@@ -104,10 +104,9 @@ extension UserCafeDetailViewController: UITableViewDelegate, UITableViewDataSour
         }
         
         if segue.identifier == "editCafeDetail" {
-            if let data = detailData, let indexPath = indexPathRow {
+            if let data = detailData {
                 let destinationVC = segue.destination as! NewCafeTableViewController
                 destinationVC.userCafeData = data
-                destinationVC.indexPathRow = indexPath
             }
         }
     }
