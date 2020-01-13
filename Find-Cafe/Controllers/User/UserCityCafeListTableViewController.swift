@@ -11,27 +11,31 @@ import Firebase
 
 
 class UserCityCafeListTableViewController: UITableViewController {
-
+    
     var cityEnName: String!
     var userCafeDatas = [UserCafeDatas]()
     let db = Firestore.firestore()
     let defaultURL = "https://firebasestorage.googleapis.com/v0/b/find-cafe-8c443.appspot.com/o/804341E1-77D3-4E25-9372-781D06A7E8A3.jpg?alt=media&token=cb023511-760f-45f7-8665-5b8dd0f4c2fc"
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.backgroundColor = UIColor(red: 229 / 255, green: 216 / 255, blue: 191 / 255, alpha: 1)
         tableView.separatorStyle = .none
+
         
         loadCafeData()
+        
     }
-
+    
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return userCafeDatas.count
@@ -48,7 +52,7 @@ class UserCityCafeListTableViewController: UITableViewController {
         cell.backgroundColor = UIColor(red: 229 / 255, green: 216 / 255, blue: 191 / 255, alpha: 1)
         return cell
     }
-
+    
     @IBAction func unwinToNewCafeTableView(segue: UIStoryboardSegue) {
         if let source = segue.source as? NewCafeTableViewController, let userCafeData = source.userCafeData, let userId = Auth.auth().currentUser?.email  {
             let docuementId = userCafeData.date
@@ -71,7 +75,6 @@ class UserCityCafeListTableViewController: UITableViewController {
                     }
                 }
             }
-            
         }
     }
     
@@ -87,7 +90,7 @@ class UserCityCafeListTableViewController: UITableViewController {
                     if let snapshotDocuments = querySnapshot?.documents {
                         for doc in snapshotDocuments {
                             let data = doc.data()
-
+                            
                             if let name = data["name"] as? String, let city = data["city"] as? String, let tasty = data["tasty"] as? Double, let address = data["address"] as? String, let mrt = data["mrt"] as? String, let url = data["url"] as? String, let open_time = data["open_time"] as? String, let note = data["note"] as? String, let imageURL = data["imageURL"] as? String, let date = data["date"] as? String, let storageName = data["storageName"] as? String {
                                 if let imageUrl = URL(string: imageURL) {
                                     let task = URLSession.shared.dataTask(with: imageUrl, completionHandler: {(data, response, error) in
@@ -96,7 +99,7 @@ class UserCityCafeListTableViewController: UITableViewController {
                                         }else if let imageData = data {
                                             let newUserCafeDatas = UserCafeDatas(name: name, city: city, tasty: tasty, address: address, mrt: mrt, url: url, open_time: open_time, note: note, image: imageData, imageURL: imageURL, date: date, storageName: storageName)
                                             self.userCafeDatas.append(newUserCafeDatas)
-
+                                            
                                             DispatchQueue.main.async {
                                                 self.tableView.reloadData()
                                             }
@@ -107,8 +110,10 @@ class UserCityCafeListTableViewController: UITableViewController {
                             }
                         }
                     }
+                    
                 }
         }
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -116,6 +121,7 @@ class UserCityCafeListTableViewController: UITableViewController {
             if let indexPath = tableView.indexPathForSelectedRow{
                 let destinationVC = segue.destination as! UserCafeDetailViewController
                 destinationVC.detailData = userCafeDatas[indexPath.row]
+                print(userCafeDatas)
             }
         }
     }
@@ -151,8 +157,8 @@ class UserCityCafeListTableViewController: UITableViewController {
             }
         }
     }
-
     
     
-
+    
+    
 }

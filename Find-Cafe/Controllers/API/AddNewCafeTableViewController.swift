@@ -1,16 +1,16 @@
 //
-//  NewCafeTableViewController.swift
+//  AddNewCafeTableViewController.swift
 //  Find-Cafe
 //
-//  Created by APAN on 2020/1/2.
+//  Created by APAN on 2020/1/12.
 //  Copyright © 2020 APAN. All rights reserved.
 //
 
 import UIKit
 import Firebase
 
-class NewCafeTableViewController: UITableViewController {
-
+class AddNewCafeTableViewController: UITableViewController {
+    
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var nameTextField: UITextField! {
         didSet {
@@ -63,35 +63,29 @@ class NewCafeTableViewController: UITableViewController {
             cityPickerView.dataSource = self
         }
     }
+    var apiData : APIData?
     var userCafeData: UserCafeDatas?
     var userCitiesBrain = UserCitiesBrain()
     var photoImageURL: URL?
     var date: String?
     var storageName: String?
-    var editMode: Bool = false
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if let userCafeData = userCafeData {
-            nameTextField.text = userCafeData.name
-            cityTextView.text = userCafeData.city
-            tastyTextField.text = userCafeData.tasty?.description
-            addressTextField.text = userCafeData.address
-            mrtTextField.text = userCafeData.mrt
-            urlTextField.text = userCafeData.url
-            opentimeTextField.text = userCafeData.open_time
-            noteTextView.text = userCafeData.note
-            photoImageView.image = UIImage(data: userCafeData.image!)
-            photoImageView.contentMode = .scaleToFill
-            photoLayout(imageView: photoImageView)
-            date = userCafeData.date
-            photoImageURL = URL(string: userCafeData.imageURL!)
-            storageName = userCafeData.storageName
-            editMode = true
-            self.navigationItem.title = "Edit Cafe"
+        if let data = apiData {
+            nameTextField.text = data.name
+            addressTextField.text = data.address
+            cityTextView.text = data.city
+            tastyTextField.text = data.tasty.description
+            mrtTextField.text = data.mrt
+            urlTextField.text = data.url
+            opentimeTextField.text = data.open_time
+            noteTextView.text = ""
         }
-
+        
+        
+        
     }
     
     // 點擊空白出讓鍵盤消失
@@ -109,8 +103,10 @@ class NewCafeTableViewController: UITableViewController {
             alert.addAction(alertAction)
             present(alert, animated: true, completion: nil)
             return
+
+
         }
-        
+
         let name = nameTextField.text ?? ""
         let city = cityTextView.text ?? ""
         let tasty = Double(tastyTextField.text!) ?? 0.0
@@ -126,12 +122,13 @@ class NewCafeTableViewController: UITableViewController {
         if photoImageURL?.absoluteString == nil {
             storageName = ""
         }
-        
+
         userCafeData = UserCafeDatas(name: name, city: city, tasty: tasty, address: address, mrt: mrt, url: url, open_time: open_time, note: note, image: image, imageURL: photoImageURL?.absoluteString, date: date!, storageName: storageName!)
     }
+
 }
 
-extension NewCafeTableViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+extension AddNewCafeTableViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -153,7 +150,7 @@ extension NewCafeTableViewController: UIPickerViewDelegate, UIPickerViewDataSour
     }
 }
 
-extension NewCafeTableViewController: UITextFieldDelegate {
+extension AddNewCafeTableViewController: UITextFieldDelegate {
     // 按return鍵後跳到下一個textfiled
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if let nextTextField = view.viewWithTag(textField.tag + 1) {
@@ -164,7 +161,7 @@ extension NewCafeTableViewController: UITextFieldDelegate {
     }
 }
 
-extension NewCafeTableViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension AddNewCafeTableViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
@@ -255,3 +252,4 @@ extension NewCafeTableViewController: UIImagePickerControllerDelegate, UINavigat
         bottomConstraint.isActive = true
     }
 }
+

@@ -11,9 +11,8 @@
 1. 串接Cafe Nomad提供的API
 2. 利用Firebase第三方套件建立登入與註冊功能
 3. 可建立個人私房咖啡店清單
-4. 可將API上的咖啡店資訊添加到個人清單內(尚未完成)
-5. 利用Core Data儲存個人清單的資料(尚未完成)
-6. 建立的私房咖啡店清單資料都儲存在firebase的cloud firestore與storage
+4. 可將API上的咖啡店資訊添加到個人清單內
+5. 建立的私房咖啡店清單資料都儲存在firebase的cloud firestore與storage
 
 ------
 

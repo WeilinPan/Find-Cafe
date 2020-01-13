@@ -13,13 +13,17 @@ import SafariServices
 class UserCafeDetailViewController: UIViewController {
     
     var detailData: UserCafeDatas?
-//    var indexPathRow: Int!
+
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var headerView: UserCafeDetailHeaderView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.backgroundColor = UIColor(red: 229 / 255, green: 216 / 255, blue: 191 / 255, alpha: 1)
+
+        
         if let data = detailData, let image = data.image {
             headerView.headerImageView.image = UIImage(data: image)
             headerView.nameLabel.text = data.name

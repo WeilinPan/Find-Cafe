@@ -15,6 +15,8 @@ class APICitiesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.backgroundColor = UIColor(red: 229 / 255, green: 216 / 255, blue: 191 / 255, alpha: 1)
+        tableView.separatorStyle = .none
     }
 
     // MARK: - Table view data source

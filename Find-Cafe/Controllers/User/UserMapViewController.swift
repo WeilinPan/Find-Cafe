@@ -40,12 +40,5 @@ class UserMapViewController: UIViewController {
              })
         }
     }
-//
-//    func configure(location: String, name: String) {
-//
-//
-//    }
-
-    
 
 }

@@ -9,6 +9,7 @@
 import UIKit
 
 
+
 class APICityCafeListTableViewController: UITableViewController {
 
     var cityEnName: String?
@@ -50,6 +51,8 @@ class APICityCafeListTableViewController: UITableViewController {
         return cell
     }
     
+
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showCafeDetails" {
             if let indexPath = tableView.indexPathForSelectedRow{

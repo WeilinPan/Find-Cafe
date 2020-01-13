@@ -11,6 +11,7 @@ import Firebase
 
 class MainViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var emailTextfield: UITextField! {
            didSet {
                emailTextfield.tag = 1
@@ -30,6 +31,28 @@ class MainViewController: UIViewController {
         // 設定按鈕外觀
         buttonShape(button: loginButton)
         buttonShape(button: registerButton)
+        
+        // navigation bar設定
+        guard let navBar = navigationController?.navigationBar else {fatalError("Navigation controller does not exist")}
+        let appearance = UINavigationBarAppearance().self
+        appearance.largeTitleTextAttributes = [
+        NSAttributedString.Key.foregroundColor: UIColor(red: 156 / 255, green: 60 / 255, blue: 49 / 255, alpha: 1)]
+        appearance.titleTextAttributes = [
+        NSAttributedString.Key.foregroundColor: UIColor(red: 156 / 255, green: 60 / 255, blue: 49 / 255, alpha: 1)]
+        navBar.standardAppearance = appearance
+
+        
+        titleLabel.text = ""
+        // 設成Double主要是配合Timer時間間隔設0.1的關係，亦可設成Int然後在Timer裡轉成Double
+        var index = 0.0
+        let titleText = "Find Café☕️"
+        for letter in titleText {
+            // 藉由Timer的語法將字傳入時間有間隔，但只設0.1仍是一下就呈現，看不出差異，故藉由index的遞增，後續傳入的時間間隔會更大，更明顯
+            Timer.scheduledTimer(withTimeInterval: 0.2 * index, repeats: false) { (timer) in
+                self.titleLabel.text?.append(letter)
+            }
+            index += 1
+        }
 
     }
     
