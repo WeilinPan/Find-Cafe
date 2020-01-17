@@ -43,7 +43,7 @@ class MainViewController: UIViewController {
 
         
         titleLabel.text = ""
-        // 設成Double主要是配合Timer時間間隔設0.1的關係，亦可設成Int然後在Timer裡轉成Double
+        // 設成Double主要是配合Timer時間間隔設0.2的關係，亦可設成Int然後在Timer裡轉成Double
         var index = 0.0
         let titleText = "Find Café☕️"
         for letter in titleText {
